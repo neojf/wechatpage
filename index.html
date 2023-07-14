@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>跳转到Bilibili</title>
+</head>
+<body>
+  <button onclick="openBilibili()">用Bilibili打开</button>
+
+  <script>
+    function openBilibili() {
+      // 在这里放置跳转到Bilibili的代码
+      // 以下是一种可能的方法，可以尝试适配微信环境和Bilibili app的URL Scheme
+      var userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.indexOf('micromessenger') !== -1) {
+        // 如果在微信中打开，尝试跳转到Bilibili app
+        window.location.href = 'bilibili://'; // 这是Bilibili app的URL Scheme，请确保手机上已安装Bilibili app
+      } else {
+        // 如果不在微信中打开，提供其他方式打开Bilibili
+        alert('请使用微信打开此页面');
+      }
+    }
+  </script>
+</body>
+</html>
