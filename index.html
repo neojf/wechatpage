@@ -29,8 +29,9 @@
     function openBilibili() {
       var userAgent = navigator.userAgent.toLowerCase();
       if (userAgent.indexOf('micromessenger') !== -1) {
-        window.location.href = 'bilibili://';
+        window.location.href = 'example://gizmos';
       } else {
+        window.location.href = 'example://gizmos';
         alert('Please use WeChat to open this page.');
       }
     }
