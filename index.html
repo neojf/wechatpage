@@ -29,12 +29,12 @@
     function openLtw() {
       var userAgent = navigator.userAgent.toLowerCase();
       if (userAgent.indexOf('micromessenger') !== -1) {
-        window.open('example://gizmos', '_self');
-        // window.location.href = newUrl
+        // window.open('example://gizmos', '_self');
+        window.location.href = 'example://gizmos&random='+Math.random();
         alert('Great! You are using WeChat to open this page.');
       } else {
-        window.open('example://gizmos', '_self');
-        // window.location.href = 'example://gizmos';
+        // window.open('example://gizmos', '_self');
+        window.location.href = 'example://gizmos&random='+Math.random();
         alert('Please use WeChat to open this page.');
       }
     }
