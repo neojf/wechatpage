@@ -22,13 +22,14 @@
 </head>
 <body>
   <div class="center-btn">
-    <button class="custom-btn btn btn-primary" onclick="openBilibili()">Open Bilibili</button>
+    <button class="custom-btn btn btn-primary" onclick="openLtw()">Open LTW</button>
   </div>
 
   <script>
-    function openBilibili() {
+    function openLtw() {
       var userAgent = navigator.userAgent.toLowerCase();
       if (userAgent.indexOf('micromessenger') !== -1) {
+        alert('Please use WeChat to open this page.');
         window.location.href = 'example://gizmos';
       } else {
         window.location.href = 'example://gizmos';
