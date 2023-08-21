@@ -10,12 +10,9 @@
   <div class="center-btn" id="content">
     <button class="custom-btn btn btn-primary" onclick="openLtw()">Open LTW</button>
   </div>
-  <div class="arrow-overlay" id="arrowOverlay">
-    <div class="arrow"></div>
-    <div class="instruction">
-        <p>请点击右上角按钮</p>
-    </div>
-</div>
+  <div class="transparent-image-overlay" id="overlay">
+    <img src="openusingbrowser.jpeg" alt="半透明图片">
+  </div>
   <script>
     function openLtw() {
       var userAgent = navigator.userAgent.toLowerCase();
@@ -24,14 +21,13 @@
         overlay.style.display = 'flex'
       } else {
         window.location.href = 'example://gizmos&random='+Math.random();
-        alert('Please use WeChat to open this page.');
       }
     }
   </script>
   <!-- 引入 Bootstrap JavaScript 文件 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
-    .arrow-overlay {
+    .transparent-image-overlay {
         position: fixed;
         top: 0;
         left: 0;
@@ -46,13 +42,11 @@
         padding: 20px;
     }
 
-    .arrow {
-        width: 0;
-        height: 0;
-        border-left: 20px solid transparent;
-        border-right: 20px solid transparent;
-        border-bottom: 20px solid white;
-        margin-bottom: 10px;
+    .transparent-image-overlay {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
     }
 
     .instruction {
