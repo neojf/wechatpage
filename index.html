@@ -11,7 +11,7 @@
     <button class="custom-btn btn btn-primary" onclick="openLtw()">Open LTW</button>
   </div>
   <div class="transparent-image-overlay" id="overlay">
-    <img src="openusingbrowser.jpeg" alt="半透明图片">
+    <img src="openusingbrowser.jpeg" alt="picture">
   </div>
   <script>
     function openLtw() {
@@ -27,6 +27,16 @@
   <!-- 引入 Bootstrap JavaScript 文件 -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
   <style>
+    .center-btn {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .custom-btn {
+      font-size: 24px;
+      padding: 12px 24px;
+    }
     .transparent-image-overlay {
         position: fixed;
         top: 0;
@@ -45,12 +55,9 @@
     .transparent-image-overlay {
       max-width: 100%;
       max-height: 100%;
-      width: auto;
-      height: auto;
-    }
-
-    .instruction {
-        color: white;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
     }
 </style>
 </body>
