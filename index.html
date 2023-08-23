@@ -15,13 +15,7 @@
   </div>
   <script>
     function openLtw() {
-      var userAgent = navigator.userAgent.toLowerCase();
-      if (userAgent.indexOf('micromessenger') !== -1) {
-        var overlay = document.getElementById('overlay');
-        overlay.style.display = 'flex'
-      } else {
-        window.location.href = 'example://gizmos';
-      }
+      window.location.href = 'example://gizmos';
     }
   </script>
   <!-- 引入 Bootstrap JavaScript 文件 -->
