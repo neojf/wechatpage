@@ -15,7 +15,13 @@
   </div>
   <script>
     function openLtw() {
-      window.location.href = 'example://gizmos';
+      var userAgent = navigator.userAgent.toLowerCase();
+      if (userAgent.indexOf('micromessenger') !== -1) {
+        var overlay = document.getElementById('overlay');
+        overlay.style.display = 'flex'
+      } else {
+        window.location.href = 'example://gizmos?mvc=4510510&cpsi=2d4bf5d8-d4ea-4871-b15f-caa8e15ae8f8&vm=1&r=1&apn=com.microsoft.appmanager.dev&amv=23780290&utm_source=baybridge&utm_campaign=QR&ti=822368fc3bd441a79cc327ab666cc3f2';
+      }
     }
   </script>
   <!-- 引入 Bootstrap JavaScript 文件 -->
