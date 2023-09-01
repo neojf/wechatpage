@@ -33,7 +33,8 @@
         overlay.style.display = 'flex'
       } else {
         var currentURL = window.location.href;
-        var urlParams = new URLSearchParams(currentURL);
+        var queryString = currentURL.split('?')[1];
+        var urlParams = new URLSearchParams(queryString);
         var queryParams = [];
         urlParams.forEach(function (value, key) {
           queryParams.push(key + '=' + value);
